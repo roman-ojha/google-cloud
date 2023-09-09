@@ -1,0 +1,2 @@
+*) Google Cloud Compute Engine Options:
+    -> https://cloud.google.com/blog/products/compute/choosing-the-right-compute-option-in-gcp-a-decision-tree

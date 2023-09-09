@@ -1,0 +1,13 @@
+*) Storage:
+    1. Cloud Storage:
+        -> https://cloud.google.com/storage/docs
+        -> Object storage
+        -> This is not the type of storage that you would attach to you instances and store you operating system on.
+        -> Here we are managing data as objects like: documents, pictures etc...
+        -> It is not like a block storage where you can store OS.
+
+    2. FileStore
+        -> If you want to access the same data using Multiple instances and kubernetes clusters in that case we can use FileStore
+    
+    3. Persistent Disks:
+        -> Used as a drives for instances.
