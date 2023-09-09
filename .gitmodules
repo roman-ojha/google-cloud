@@ -1,0 +1,3 @@
+[submodule "Notes/01_Asoociate_Cloud_Engineer/00_Course/google-cloud-associate-cloud-engineer"]
+	path = Notes/01_Asoociate_Cloud_Engineer/00_Course/google-cloud-associate-cloud-engineer
+	url = git@github.com:roman-ojha/google-cloud-associate-cloud-engineer.git
