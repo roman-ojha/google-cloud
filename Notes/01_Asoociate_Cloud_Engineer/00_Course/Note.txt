@@ -1,2 +1,2 @@
 *) Resources:
-    -> https://github.com/antonitz/google-cloud-associate-cloud-engineer
+    -> https://github.com/antonitz/google-cloud-associate-cloud-engineer/tree/e927c2f4268d2e37c204d70b5d2b41f0bc07302a
