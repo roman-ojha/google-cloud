@@ -1,0 +1,6 @@
+*) Google cloud Infrastructure:
+    -> https://cloud.google.com/about/locations
+
+
+*) Geography and Regions:
+    -> https://cloud.google.com/docs/geography-and-regions
