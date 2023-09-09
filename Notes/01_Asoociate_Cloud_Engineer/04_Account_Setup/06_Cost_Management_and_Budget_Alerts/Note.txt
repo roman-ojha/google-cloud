@@ -1,0 +1,25 @@
+*) Committed use discounts:
+    -> https://cloud.google.com/docs/cuds
+    -> https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts
+    
+    -> You will find it under Compute Engine
+    
+    -> Demo: https://youtu.be/jpno8FSqpc8?t=9498
+
+
+*) Spend based Commitment:
+    -> You will find it under Billing section
+    -> Demo: https://youtu.be/jpno8FSqpc8?t=9817
+
+*) GCP calculator:
+    -> https://cloud.google.com/products/calculator
+
+*) Cloud Billing Budget Alert:
+    -> https://cloud.google.com/billing/docs/how-to/budgets
+    -> https://cloud.google.com/billing/docs/how-to/budget-api-overview
+    
+    -> You can create budget alert here under billing page where you can find Budget & alerts
+    -> Demo: https://youtu.be/jpno8FSqpc8?t=9916
+    *) Monitoring Budget Alerts:
+        -> Under this page you can add email, slack, sms etc.. budget alert monitoring: https://console.cloud.google.com/monitoring/alerting
+        -> Demo: https://youtu.be/jpno8FSqpc8?t=10190
