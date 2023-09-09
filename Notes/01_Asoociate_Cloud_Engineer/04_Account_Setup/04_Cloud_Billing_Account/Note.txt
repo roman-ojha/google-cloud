@@ -1,0 +1,13 @@
+-> https://youtu.be/jpno8FSqpc8?t=8019
+
+-> Demo: https://youtu.be/jpno8FSqpc8?t=8357
+
+-> Manage different billing accounts here: https://console.cloud.google.com/billing/
+-> Create new billing account: https://console.cloud.google.com/billing/create?organizationId=0
+
+*) How to attach project to different billing account:
+    -> https://youtu.be/jpno8FSqpc8?t=8681
+    -> NOTE: that if you want to change the billing account for the project and you are a regular user you will need the role of "Billing Account Administrator" as well the "Project Owner" Role.
+
+*) Close Billing Account:
+    -> https://youtu.be/jpno8FSqpc8?t=8814
