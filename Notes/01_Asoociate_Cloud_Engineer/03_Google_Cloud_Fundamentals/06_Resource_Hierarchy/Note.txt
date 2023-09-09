@@ -1,0 +1,33 @@
+*) Resource Hierarchy:
+    1. Domain (Cloud Level):
+        -> primary identity of you organization.
+        -> This is where you manage you organizations like users, policies.
+    2. Organization (root node):
+        -> Associated with one domain.
+        -> all control policies apply to organization level are inherited by all other entities and resources underneath it.
+        -> When an organization is created then organization admin role is also created.
+    3. Folder Layer:
+        -> Grouping Mechanism and isolated boundary.
+        -> If you have different department and teams on you organization in that case this is the level where we can organize.
+        -> Folder can container multiple folders and resources but one folder can only have one parent folder.
+    4. Projects layer:
+        -> Core organizational component layer as project are required to use service level resources.
+        -> Base level organizing entity in GCP.
+        -> NOTE: any given resource can only exist on project and not multiple project at the same time.
+    5. Resource Level:
+        -> Any service level resource create in GCP like Compute engine, cloud bucket, Databases, API etc...
+
+    -> Everything underneath domain level consider as a resource in Resource Hierarchy.
+    -> Everything between Organization level to Projects level called as Account Level resources.
+    -> Everything under the Project layer is called as Service level resource.
+
+*) Labels:
+    -> It helps categories resources by using a key value pair and you can attach them to any resource.
+    -> it help to break down and organize cost when it comes to billing.
+
+
+*) Demo Example:
+    -> './07_Resource_Hierarchy.PNG'
+    -> Let's Tony is part of Department B and his manager decide to set a policy on department B folder.
+    -> And this policy grands project owner role.So, Tony will have Project Owner role for "Project X" & "Project Y".
+    -> At the same time Manager assign Laura at "Bowtie Inc.co" Cloud storage Admin role on "Project X" now se will be only be able to manage Cloud storage Buckets in that Projects.
