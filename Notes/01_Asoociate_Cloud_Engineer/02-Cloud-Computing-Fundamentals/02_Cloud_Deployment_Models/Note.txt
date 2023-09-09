@@ -1,0 +1,12 @@
+*) Cloud Deployment Models:
+    1. Public Cloud:
+        -> Publicly available
+    2. Multi Cloud:
+        -> Public cloud can also be connected and use together within a single environment for various use cases.
+        -> It cloud be effective if architect in right way, we can use it for disaster recovery.
+        -> Where you architecture are replicated over different public clouds incase one ware to go down another cloud pick up the slack.
+    3. Private Cloud:
+        -> No public access but contain 5 main characteristics.
+        -> Google Cloud have 'Anthos', AWS have 'Aws Outposts', Azure have 'Azure Stack'
+    4. Hybrid:
+        -> Using Private cloud with public cloud as a single system.
