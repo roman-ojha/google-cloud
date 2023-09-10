@@ -1,0 +1,127 @@
+*) Cloud SDK and CLI
+    -> https://cloud.google.com/sdk/docs
+    -> Set of command line tools that allow you to manage resources through the terminal
+    -> Command likes:
+        1. gcloud
+            -> for compute engine
+            -> Initialize, authorize an access and perform other command cloud sdk setup steps.
+            *> gcloud auth login
+                -> authorize access for gcloud with google user credential.
+            *> gcloud config
+                -> allow to configure accounts and Projects.
+            *> gcloud components
+                -> allow to install, update, delete optional components of the SDK.
+            
+            -> gcloud command format:
+                -> './
+        2. gsutil:
+            -> for cloud storage
+        3. bq:
+            -> for big query
+        3. kubectl
+            -> kubernetes cluster
+            
+    -> You can do ever thing that you can do through GCP console and more then that.
+    -> You can use it for Infrastructure as code, Autocompletion, Powershell etc...
+
+    -> To get access to GCP you have to authorize Google Cloud SDK tools. so, to grant authorization to tools you can use ether User account or Service account.
+        *) User Account:
+            -> allow user to authenticate directly to you application.
+            -> for use case on single machine using user account is best practice.
+        *) Service account:
+            -> Google account that is associated with GCP Project and not a specific User.
+            -> It can be use by providing a Service account key to you application.
+        
+    *) Install Cloud SDK:
+        -> https://cloud.google.com/sdk/docs/how-to
+
+    *) Commands:
+        -> gcloud --help
+        -> NOTE: that you can apply '--help' flag on any command hierarchy where you want some help for.
+        -> gcloud config list (get current configuration detail like: 'accessibility', 'compute', 'user' details)
+        -> gcloud init (initialize the configuration, authorize access and perform cloud sdk setup steps)
+        -> gcloud init --console-only (exclude browser based authorization)
+
+
+    *) Managing the Cloud SDK:
+        *) Configure as different another user:
+            -> gcloud init
+                -> (we will create the new configuration)
+                -> previous configuration name will be set as default so you have to name the new configuration
+                -> for now we will put 'razzroman98' and login with new account.
+                -> NOTE that 'razzroman99' of 'default' configuration is the master and administration account which have ever privileges.
+        
+        -> let's use: gcloud config list:
+            -> gcloud config list
+                [accessibility]
+                screen_reader = False
+                [core]
+                account = razzroman98@gmail.com
+                disable_usage_reporting = True
+                project = social-application-326411
+
+                Your active configuration is: [razzroman98]
+
+        *) Authorize access only
+            -> gcloud auth login
+        
+        *) Get list of authorized account and to see active account:
+            -> gcloud auth list
+
+        *) Set different account as active account:
+            -> gcloud config set account <account>
+                -> Here this will change the active account but will not change the configuration
+                -> let's again see config list: gcloud config list
+                    [accessibility]
+                    screen_reader = False
+                    [core]
+                    account = razzroman99@gmail.com
+                    disable_usage_reporting = True
+                    project = social-application-326411
+
+                    Your active configuration is: [razzroman98]
+                -> here we can see that the project 'social-application-326411' is belongs to 'razzroman98@gmail.com' but here we set this configuration to the 'razzroman99@gmail.com' but for now 'razzroman99@gmail.com' don't have access to this configuration
+        
+        *) Change the configuration:
+            -> gcloud config configurations activate <configuration_name>
+                -> so above we see that we 'razzroman99@gmail.com' don't have access to 'razzroman98' configuration
+                -> so we will change configuration to 'default':
+                -> EX: gcloud config configurations activate default
+                
+        *) Create multiple configuration for same user account:
+            -> gcloud config configurations create <configuration_name>
+            
+        *) Get the information about the configuration:
+            -> gcloud config configurations describe <configuration_name>
+                -> EX: gcloud config configurations describe default
+                    is_active: true
+                    name: default
+                    properties:
+                    compute:
+                        region: asia-south1
+                        zone: asia-south1-a
+                    core:
+                        account: razzroman99@gmail.com
+                        project: my-project-1531623488037
+
+        *) Change Project,
+            -> gcloud config set project <project_name>
+                -> NOTE: that when you change these properties it will only apply for the active configuration.
+
+        *) Compute region and zone:
+            -> gcloud config set compute/<zone>
+
+        *) Revoke credential from an account that you don't need any more:
+            -> gcloud auth revoke <account>
+            
+        *) Get information about the gcloud:
+            -> gcloud info
+            -> You can find user config directory where it holds all the auth credentials using 'gcloud info'
+                -> where you can find 'User Config Directory' where it holds it holds credential and access tokens along side with you active configurations and any other configurations as well.
+
+        *) See all the list of gcloud components like 'kubectl', 'bq' etc...:
+            -> gcloud components list
+
+        *) Install/Remove components:
+            -> gcloud components install <component_name>
+            -> gcloud components remove <component_name>

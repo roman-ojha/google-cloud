@@ -1,0 +1,2 @@
+-> gcloud --help
+-> gcloud config list (get current configuration detail like: 'accessibility', 'compute', 'user' details)
