@@ -1,0 +1,6 @@
+*) GCP APIs:
+    -> It is the APIs that is provided by the GCP.
+    -> https://console.cloud.google.com/apis/dashboard
+    -> You can finds APIs like Youtube API, Google oAuth, BigQuery APIs etc...
+    -> First you have to enable APIs & services the we can see all the list of apis that are available on google cloud.
+        -> https://console.cloud.google.com/apis/library

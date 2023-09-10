@@ -1,0 +1,21 @@
+*) Super Admin account:
+    -> Irrevocable admin permissions.
+    -> We should now use this account daily.
+
+*) Admin user account architecture:
+    -> './02_Admin_user_account_architecture.PNG'
+    1. Billing Account Administrator.
+        -> Have every permission related to billing account.
+    2. Billing Account User:
+        -> he/she is able to links project to that billing account but doesn't hold full access to billing as Billing Account Administrator.
+
+    -> Practical Demo:
+        -> Here we will add new "Billing Account User" to access the information about the billing.
+        -> Video: https://youtu.be/jpno8FSqpc8?t=11280
+        -> here we will going to provide one account less privilege on billing, but it will still give me all the permissions I need to create, edit & delete the resources without all the powerful permissions needed for billing
+        -> So for now we will use different gmail account ex: 'razzroman@gmail.com" to assign as "Billing Account User" account.
+        -> Under Billing Account Management: https://console.cloud.google.com/billing/013496-6CF1F2-C9A518/manage
+        -> Where we can add new Billing account or add new principle where Role will be as a "Billing Account User"
+        -> After assigning another account as "Billing Account User" we can be able to view billing information on that account but doesn't have permission to change billing another other billing related permissions
+        -> Also we have not gave permission to access Project by that 'razzroman@gmail.com" account because of that they won't be able to see the project where that billing account is associated with.
+        -> But 'razzroman@gmail.com" can be able to create new project and assign the billing account to that project.
