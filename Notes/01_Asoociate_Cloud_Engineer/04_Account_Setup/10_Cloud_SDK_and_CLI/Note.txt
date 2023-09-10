@@ -122,6 +122,22 @@
         *) See all the list of gcloud components like 'kubectl', 'bq' etc...:
             -> gcloud components list
 
-        *) Install/Remove components:
+        *) Install/Remove/Update components:
             -> gcloud components install <component_name>
             -> gcloud components remove <component_name>
+            -> gcloud components update <component_name>
+            
+        *) GCloud Interactive Shell
+            -> https://cloud.google.com/sdk/docs/interactive-gcloud
+            -> provide richer shell experience, simplifying commands and documentation discovery with as you type autocompletion and help text snippets bellow.
+            -> It can produce snippets, suggestion and autocompletion for 'gcloud', 'bq', 'gsutil', 'kubectl' as well as for those command which have main page.
+            -> Let's first install Beta command component:
+                -> 'gcloud components install beta
+            => To run GCloud Interactive Shell run this command:
+                -> gcloud beta interactive
+                
+            -> Now we can run GCloud command inside interactive shell and it will give us a suggestion.
+            -> Also it gives us the command associated documentation
+
+        *) Get list of compute instances according to zone:
+            -> gcloud compute instances list --filter="zone:(us-east1-a)"
