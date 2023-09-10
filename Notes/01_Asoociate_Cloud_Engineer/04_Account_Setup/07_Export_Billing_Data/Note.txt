@@ -1,0 +1,14 @@
+*) Export Billing Data:
+    -> we ca export billing data to analyze the data and do action according to that.
+    -> we can perform big queries to analyze.
+
+    -> Practical:
+        -> Demo: https://youtu.be/jpno8FSqpc8?t=10475
+        -> Go under Billing and then on Side bar you can find "billing export"
+        -> To export the billing data you need to we need to create BigQuery dataset first and then assign it to the project.
+        -> So to create big query you can go to: https://console.cloud.google.com/marketplace/product/google/bigquery.googleapis.com
+        -> Under project we can create new Dataset for BillingExport
+        -> Now we can assign daily billing on BillingExport Dataset that we created.
+        -> There is one last step that needs to be done to enable billing export to work and that is to enable bigquery data transfers service api.
+        -> For that we can go to "APIs & Services" Section Or we can search for 'BigQuery Data transfer API' and we will enable the API.
+        -> Now on BigQuery we will be able to see the dataset and we will be able to query the data
