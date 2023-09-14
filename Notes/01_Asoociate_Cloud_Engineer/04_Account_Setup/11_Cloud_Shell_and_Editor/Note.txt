@@ -1,1 +1,14 @@
-=> https://youtu.be/jpno8FSqpc8?t=13946
+*) Cloud Shell and Editor:
+	-> https://cloud.google.com/shell/docs
+	-> Command line access to you google cloud resources
+	-> Cloud shell also comes with the build in code editor it allows you to browse file directory as well as view and edit files while still accessing the cloud shell, The code editor is accessible by default with every cloud shell instance and it is base on the open source VM.
+	-> So cloud shell is the environment inside the docker container run on the VM.
+	-> Inside cloud shell we are automatically authenticated as the google account you are logged in with.
+	-> When you start the cloud shell the active console project is propagated to you gCloud configuration inside cloud shell.
+	-> If you want to change the project then you can do 'gcloud config set project [PROJECT_ID]'
+	-> Cloud shell will automatically get create inside the closest region to avoid latency.
+	-> If you want to see where you cloud shell is currently active then you can use: 
+		-> curl metadata/computeMetadata/v1/instance/zone
+	-> There are a lots of pre installed tools and language support on cloud shell.
+
+	-> https://youtu.be/jpno8FSqpc8?t=14225
