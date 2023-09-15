@@ -1,0 +1,41 @@
+*) Cloud IAM:
+	-> https://cloud.google.com/iam/docs
+	*) Principle of Least Privilege:
+		-> A User, Program, or Process should have only the bare minimum privileges necessary to perform it's function.
+		-> EX: if lisa is performing create function on cloud storage bucket where lisa should be restricted to create permission only on exactly one cloud storage bucket.
+	-> By using IAM we manage access control by defining who(Identity) has access which is the Role to which resources which also include organizations, folders and projects.
+	-> In IAM permission to access resource is not directly granted to the user instead permissions are grouped into roles and the roles are granted to authenticated members.
+	-> IAM policies defines and enforces what roles are granted to which members and it's policies are attached to a resource.
+	*) Policy Architecture:
+		-> Policy is a binding, Audit configurations and metadata.
+		-> Binding specifies how access granted on resources.
+		-> Metadata include extra information about the policy ex: 'etags', 'version'
+		-> Audit specifies the configuration data of how access attempted should be audited.
+		*) Members:
+			-> './02_Members.PNG'
+			-> This is an identity that can access resource.
+			-> Identity of an member is an email address associated with the user, service account, google group, domain name.
+		*) Roles:
+			-> https://cloud.google.com/iam/docs/roles-overview
+			-> This is a names collections of permissions that grant access to perform action on google cloud resources.
+			*) Permission:
+				-> './03_Permissions.PNG'
+				-> Determine what operations are allowed on a resource.
+				-> Correspond one-to-one with REST API methods.
+				-> Not granted to users directly but grouped together with in that role.
+				-> You grant roles which contain one or more permissions
+			-> './04_Roles.PNG'
+			-> Types of Roles: './05_Roles_Types'
+				1. Primitive Roles
+				2. Predefined Roles
+				3. Custom Roles
+		*) Condition:
+			-> https://cloud.google.com/iam/docs/conditions-overview
+			-> './06_Conditions'
+		*) Metadata:
+			-> './07_Metadata.PNG'
+		*) Audit config:
+			-> './08_Audit_Config.PNG'
+
+	*) Policy Inheritance:
+		-> https://cloud.google.com/iam/docs/resource-hierarchy-access-control
