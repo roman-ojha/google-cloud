@@ -10,5 +10,37 @@
 	-> If you want to see where you cloud shell is currently active then you can use: 
 		-> curl metadata/computeMetadata/v1/instance/zone
 	-> There are a lots of pre installed tools and language support on cloud shell.
+	*) Open Cloud shell Editor:
+		-> edit <file_name>
+		-> edit .
+	*) Customize cloud shell environment
+		-> we can customize our shell environment when it boots up
+		-> we can add a script that which will run as root user and install any kind of a tools that we required on start of cloud shell.
+		-> It store all the customization settings inside '.customize_environment' file in user folder '~'
+		-> EX: let's say that we want terraform get installed when cloud shell boots up for that we will edit '.customize_environment' file:
+			#!/bin/sh
+			TERRAFORM_VERSION="1.5.7"
+			curl https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip > terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+			unzip -o terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/local/bin
 
-	-> https://youtu.be/jpno8FSqpc8?t=14225
+			-> And now we have to restart the cloud shell
+
+	-> Also we can run any gcloud command that we did using Cloud SDK
+
+	*) Run HTTP server:
+		-> you have on the right top side 'Web Preview' button which can help us to previous any web application that listen to HTTP request on the cloud shell.
+		-> SimpleHTTPServer example:
+			Initialize Cloud Shell
+			Copy and paste this python code right into the Cloud Shell
+
+			cd `mktemp -d` \
+			    && echo '<html><h1>Hello World</h1></html>' >./index.html \
+			    && python -m SimpleHTTPServer 8080
+
+			Hit Enter
+			Click on the "Web Preview" button
+			A new browser tab will open showing "Hello World" in the top left hand corner
+			Close browser tab
+			In the Cloud Shell, use "control + C" to cancel the SimpleHTTPServer
+
+	-> If you will not use Cloud shell for 150 days then the home disk will get deleted
