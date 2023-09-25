@@ -1,0 +1,5 @@
+*) Policiy:
+  -> https://cloud.google.com/iam/docs/policies
+
+*) Condition:
+  -> https://cloud.google.com/iam/docs/conditions-overview
