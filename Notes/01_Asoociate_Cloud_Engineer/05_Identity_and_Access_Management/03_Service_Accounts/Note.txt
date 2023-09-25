@@ -42,3 +42,21 @@
     -> now if we will access to the create instance console and type:
       -> gcloud config list
       -> we will be able to see the default service account that had been assigned while creating the instance.
+    -> Let's say that we have give access to Storage Bucket Read Only permission then we can now access it using 'gsutil' command:
+      -> gsutil ls gs://<name_of_the_bucket>
+    -> Now if we will try to copy new file into the bucket then it will say access denied:
+      -> gsutil cp <file> gs://<name_of_the_bucket>
+
+  *) Create New Service Account:
+    -> https://youtu.be/jpno8FSqpc8?t=19469
+    -> You can create service account inside here: https://console.cloud.google.com/iam-admin/serviceaccounts/create
+    -> While creating service account now we can provides Role and permission to access to specific service with specific permissions
+    -> We can now add Keys so that we can access to the provided roles using service account from you machine or other cloud or instances.
+    -> Now we can assign the newly create service account to the Services or in above example on Compute Instance.
+
+  *) Create Service Account using Cloud Shell:
+    -> gcloud iam service-accounts list (to see all the service account that is available for the project)
+    -> gcloud iam service-accounts create <service_account_name_ex:sa-roman-shell> --display-name='<display_name>' (create new service account)
+    -> gcloud projects add-iam-policy-binding <project_id> --member 'serviceAccount:<service_account_email>' --role 'roles/<rile_id>'
+      -> (Assign new role to the service account)
+      -> EX: gcloud projects add-iam-policy-binding roman-personal-398809 --member 'serviceAccount:sa-roman-shell@roman-personal-398809.iam.gserviceaccount.com' --role 'roles/storage.objectViewer'

@@ -2,3 +2,15 @@
 -> gcloud config list (get current configuration detail like: 'accessibility', 'compute', 'user' details)
 -> gcloud projects add-iam-policy-binding <project_id> --member user:<gmail> --role roles/storage.admin (Give Role access to the given user, like in this case storage admin role)
 -> gcloud projects get-iam-policy <project_id|number> (get the detail info about project policies)
+-> gsutil ls gs://<name_of_the_bucket> (to view all the files inside the storage bucket)
+-> gsutil cp <file> gs://<name_of_the_bucket> (to copy the given file into the bucket)
+-> gcloud compute instances stop <instance_name> --zone <zone> (to stop the running instance on the project)
+-> gcloud compute instances set-service-account <instance_name> --zone <zone> --service-account <service_account_email_address> (to assign service account to the stopped instance)
+-> gcloud compute instances start <instance_name> --zone <zone> (to start stopped instance)
+
+*) Create Service Account using Cloud Shell:
+  -> gcloud iam service-accounts list (to see all the service account that is available for the project)
+  -> gcloud iam service-accounts create <service_account_name_ex:sa-roman-shell> --display-name='<display_name>' (create new service account)
+  -> gcloud projects add-iam-policy-binding <project_id> --member 'serviceAccount:<service_account_email>' --role 'roles/<rile_id>'
+    -> (Assign new role to the service account)
+    -> EX: gcloud projects add-iam-policy-binding roman-personal-398809 --member 'serviceAccount:sa-roman-shell@roman-personal-398809.iam.gserviceaccount.com' --role 'roles/storage.objectViewer'
