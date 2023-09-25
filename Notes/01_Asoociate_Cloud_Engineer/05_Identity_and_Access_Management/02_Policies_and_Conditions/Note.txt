@@ -3,3 +3,6 @@
 
 *) Condition:
   -> https://cloud.google.com/iam/docs/conditions-overview
+
+*) Command:
+  -> gcloud projects get-iam-policy <project_id|number> (get the detail info about project policies)

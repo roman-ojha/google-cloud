@@ -1,2 +1,4 @@
 -> gcloud --help
 -> gcloud config list (get current configuration detail like: 'accessibility', 'compute', 'user' details)
+-> gcloud projects add-iam-policy-binding <project_id> --member user:<gmail> --role roles/storage.admin (Give Role access to the given user, like in this case storage admin role)
+-> gcloud projects get-iam-policy <project_id|number> (get the detail info about project policies)

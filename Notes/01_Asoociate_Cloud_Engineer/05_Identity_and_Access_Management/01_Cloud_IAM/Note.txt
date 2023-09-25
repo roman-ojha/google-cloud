@@ -39,3 +39,54 @@
 
 	*) Policy Inheritance:
 		-> https://cloud.google.com/iam/docs/resource-hierarchy-access-control
+
+
+*) Demo:
+	-> https://youtu.be/jpno8FSqpc8?t=17243
+	-> here you can add and edit permissions: https://console.cloud.google.com/iam-admin/iam
+
+	*) Add User on You Resources:
+		-> https://youtu.be/jpno8FSqpc8?t=18022
+		-> You can add new user inside IAM: https://console.cloud.google.com/iam-admin/iam
+		*) Give storage admin access using cloud shell:
+			-> gcloud projects add-iam-policy-binding <project_id> --member user:<gmail> --role roles/storage.admin
+				-> (This will add new policies on yaml file)
+				bindings:
+				- members:
+  				- serviceAccount:service-<id>@gcp-sa-bms.iam.gserviceaccount.com
+  				role: roles/baremetalsolution.serviceAgent
+				- members:
+  				- serviceAccount:service-<id>@compute-system.iam.gserviceaccount.com
+  				role: roles/compute.serviceAgent
+				- members:
+  				- serviceAccount:<id>-compute@developer.gserviceaccount.com
+  				- serviceAccount:<id>@cloudservices.gserviceaccount.com
+  				role: roles/editor
+				- members:
+  				- user:<gmail>@gmail.com
+  				- user:<gmail>@gmail.com
+  				role: roles/owner
+				- members:
+  				- user:<new_add_role_gmail>@gmail.com
+  				role: roles/storage.admin
+				etag: BwYGL7qlHFo=
+				version: 1
+
+	*) Cloud identity: https://console.cloud.google.com/iam-admin/cloudidentity/consumer
+		-> allow you to manage user and groups
+	*) Organizatio policies: https://console.cloud.google.com/iam-admin/orgpolicies/list
+		-> You need to have organizations and need to be a organizations administrator to access this resources
+	*) Quotas: https://console.cloud.google.com/iam-admin/quotas
+		-> Edit any quotas or any of your services
+	*) Labels: https://console.cloud.google.com/iam-admin/labels
+		-> Key value pair that help you organize and filter you resources based on their labels.
+		-> EX: if we want to label our virtual machine we can like use:
+			-> key: 'environment', values: 'development', 'production', 'testing'
+	*) Settings: https://console.cloud.google.com/iam-admin/settings
+		-> Change project name
+	*) Roles: https://console.cloud.google.com/iam-admin/roles
+		-> List of all roles and create custom roles.
+	*) Audit Logs: https://console.cloud.google.com/iam-admin/audit
+		-> Set new policy with the Audit Config Logs https://youtu.be/jpno8FSqpc8?t=17680
+	*) Groups: https://console.cloud.google.com/projectselector2/iam-admin/groups
+		->
