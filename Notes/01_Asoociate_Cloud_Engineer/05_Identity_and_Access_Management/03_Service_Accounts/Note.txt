@@ -1,0 +1,44 @@
+*) Service Account:
+  -> https://cloud.google.com/iam/docs/service-account-overview
+  -> It is a account that is used by an application or virtual machine instance and not a person.
+  -> An application uses a service account to authenticate between the application and GCP services so that user are not directly involved.
+  -> Service Account is the identity of service and the service account permissions control which resources the service can access.
+  -> Service Account is identify by it's email address which is unique to the account.
+
+*) Service Account Types:
+  -> https://cloud.google.com/iam/docs/service-account-types
+  1. User-managed
+  2. Default
+  3. Google-managed
+    -> Not recommended to change the roles
+
+*) Service Account Key:
+  -> Authenticate Service account using public and private RSA key pairs
+  1. Google managed key
+  2. User managed key
+    -> google store public key only
+    -> You store private and public key
+
+*) Service Account Permission:
+  -> Service Account is a Resource which have IAM Policies attached to it and these policies determine who can use the service account.
+  -> EX: 'roman' can have Editor role on service account and 'Laura' can have Viewer role on service account.
+  *) Service Account Scopes:
+    -> Legacy method of specifying permissions for your instance.
+
+*) Use-Case of Service Account:
+  -> Is to attach the service account to a resource
+  -> Directly impersonation service account.
+
+*) Demo:
+  -> https://youtu.be/jpno8FSqpc8?t=19001
+  -> You can find service account here: https://console.cloud.google.com/iam-admin/serviceaccounts
+  -> By default google have created some service account
+  *) Create new instance with service account
+    -> Now let's try to create a new instance:
+    -> Inside it we can see the 'Identity and API access' under it we can see that by default it have assign to the google-managed service account
+    -> Also we can give 'Access Scopes':
+      -> Inside here we can give default access scope or we can even give custom Access for each API
+      -> Like if we will give access for Project Storage Service 'Read Only' access then this instance will only going to have Read Only permission to access the Storage that is available on the project.
+    -> now if we will access to the create instance console and type:
+      -> gcloud config list
+      -> we will be able to see the default service account that had been assigned while creating the instance.
