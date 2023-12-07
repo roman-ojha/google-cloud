@@ -7,6 +7,7 @@
 -> gcloud compute instances stop <instance_name> --zone <zone> (to stop the running instance on the project)
 -> gcloud compute instances set-service-account <instance_name> --zone <zone> --service-account <service_account_email_address> (to assign service account to the stopped instance)
 -> gcloud compute instances start <instance_name> --zone <zone> (to start stopped instance)
+-> gcloud container clusters get-credentials <cluster_name> --region <region> --project <project_id> (to configure kubectl for google k8s cluster)
 
 *) Create Service Account using Cloud Shell:
   -> gcloud iam service-accounts list (to see all the service account that is available for the project)
