@@ -1,3 +1,5 @@
+-> gcloud auth login (user login through google account )
+-> gcloud config set <project_name> (set default project)
 -> gcloud --help
 -> gcloud config list (get current configuration detail like: 'accessibility', 'compute', 'user' details)
 -> gcloud projects add-iam-policy-binding <project_id> --member user:<gmail> --role roles/storage.admin (Give Role access to the given user, like in this case storage admin role)
@@ -15,3 +17,8 @@
   -> gcloud projects add-iam-policy-binding <project_id> --member 'serviceAccount:<service_account_email>' --role 'roles/<rile_id>'
     -> (Assign new role to the service account)
     -> EX: gcloud projects add-iam-policy-binding roman-personal-398809 --member 'serviceAccount:sa-roman-shell@roman-personal-398809.iam.gserviceaccount.com' --role 'roles/storage.objectViewer'
+
+
+*) Artifact Registry:
+  -> gcloud artifacts repositories create <repository_folder_name> --repository-format=docker --location=us-central1 --description="<description>" (create new repository)
+  -> gcloud builds submit --region=us-central1 --tag=us-central1-docker.pkg.dev/<project_id>/<repository_folder_name>/<image_name>:<tag,ex:latest> (build project from docker file into given repository)
